@@ -11,5 +11,5 @@ app.use(bodyParser.urlencoded());
 app.use(bodyParser.json());
 app.use("/api/highscore", HighScore);
 
-
+console.log(PORT);
 app.listen(PORT, ()=> `listening to port ${PORT}`);
