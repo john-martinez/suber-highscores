@@ -5,6 +5,6 @@ mongoose.set("debug", true);
 
 
 // connect to the database  
-mongoose.connect("mongodb://admin:4r4yk0bH3!@ds151433.mlab.com:51433/suber");
+mongoose.connect(process.env.DB_URI);
 
 module.exports.HighScore = require('./highScores');
