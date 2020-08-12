@@ -11,5 +11,6 @@ app.use(bodyParser.urlencoded());
 app.use(bodyParser.json());
 app.use("/api/highscore", HighScore);
 
-console.log(PORT);
-app.listen(PORT, ()=> `listening to port ${PORT}`);
+app.listen(PORT, function(){
+  console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+});
