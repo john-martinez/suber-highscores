@@ -1,10 +1,10 @@
 const app = require('express')();
 const db = require('../models');
 
-// return all traits
+// return all highscores
 exports.showHighScores = (req,res)=>{
-	db.HighScore.find()
-	.then(data=>res.json(data))
+	db.HighScore.find().sort({ playerScore: -1 })
+	.then(data=>res.send(data))
 	.catch(err=>res.send(err))
 }
 
